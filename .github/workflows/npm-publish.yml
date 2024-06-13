@@ -32,16 +32,16 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - name: Publish `astraicons`
-        run: npm publish
+        run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: Publish `@astraicons/react`
-        run: npm publish ./react
+        run: npm publish ./react --provenance
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: Publish `@astraicons/vue`
-        run: npm publish ./vue
+        run: npm publish ./vue --provenance
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
