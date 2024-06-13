@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Get Help
+    url: https://github.com/uiastra/astraicons/discussions/categories/q-a
+    about: "Consider using our discussion forums for questions."
+  - name: Icon Suggestion
+    url: https://github.com/uiastra/astraicons/discussions/categories/ideas
+    about: "Suggest any icon to add to this library"

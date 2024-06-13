@@ -1,0 +1,39 @@
+{
+  "name": "astraicons",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
+  "repository": "https://github.com/uiastra/astraicons.git",
+  "keywords": [
+    "uiastra",
+    "ui-icons",
+    "astraicons"
+  ],
+  "files": [
+    "linear/",
+    "bold/",
+    "brand/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "cleanup": "rimraf ./linear ./optimized ./vue/linear ./react/linear ./bold ./vue/bold ./react/bold ./brand ./vue/brand ./react/brand",
+    "build": "npm run build-bold && npm run build-linear && npm run build-brand && npm run build-react && npm run build-vue",
+    "build-react": "node ./scripts/build.js react",
+    "build-vue": "node ./scripts/build.js vue",
+    "build-linear": "rimraf ./linear ./optimized/linear && svgo --config=svgo.linear.mjs -f ./icons/linear -o ./optimized/linear --pretty --indent=2 && mkdir -p ./linear && cp -R ./optimized/linear ./linear",
+    "build-bold": "rimraf ./bold ./optimized/bold && svgo --config=svgo.bold.mjs -f ./icons/bold -o ./optimized/bold --pretty --indent=2 && mkdir -p ./bold && cp -R ./optimized/bold ./bold",
+    "build-brand": "rimraf ./brand ./optimized/brand && svgo --config=svgo.brand.mjs -f ./icons/brand -o ./optimized/brand --pretty --indent=2 && mkdir -p ./brand && cp -R ./optimized/brand ./brand"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-react-jsx": "^7.24.7",
+    "@svgr/core": "^5.5.0",
+    "@vue/compiler-dom": "^3.4.27",
+    "camelcase": "^6.0.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^5.0.7",
+    "svgo": "^3.3.2"
+  }
+}

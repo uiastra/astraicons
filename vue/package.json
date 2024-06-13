@@ -1,0 +1,87 @@
+{
+  "name": "@astraicons/vue",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
+  "keywords": [
+    "uiastra",
+    "ui-icons",
+    "vue-icons",
+    "astraicons"
+  ],
+  "homepage": "https://www.uiastra.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiastra/astraicons.git"
+  },
+  "files": [
+    "linear",
+    "bold",
+    "brand",
+    "index.esm.js",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.esm.js",
+      "require": "./index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./brand": {
+      "types": "./brand/index.d.ts",
+      "import": "./brand/esm/index.js",
+      "require": "./brand/index.js"
+    },
+    "./brand/*": {
+      "types": "./brand/*.d.ts",
+      "import": "./brand/esm/*.js",
+      "require": "./brand/*.js"
+    },
+    "./brand/*.js": {
+      "types": "./brand/*.d.ts",
+      "import": "./brand/esm/*.js",
+      "require": "./brand/*.js"
+    },
+    "./bold": {
+      "types": "./bold/index.d.ts",
+      "import": "./bold/esm/index.js",
+      "require": "./bold/index.js"
+    },
+    "./bold/*": {
+      "types": "./bold/*.d.ts",
+      "import": "./bold/esm/*.js",
+      "require": "./bold/*.js"
+    },
+    "./bold/*.js": {
+      "types": "./bold/*.d.ts",
+      "import": "./bold/esm/*.js",
+      "require": "./bold/*.js"
+    },
+    "./linear": {
+      "types": "./linear/index.d.ts",
+      "import": "./linear/esm/index.js",
+      "require": "./linear/index.js"
+    },
+    "./linear/*": {
+      "types": "./linear/*.d.ts",
+      "import": "./linear/esm/*.js",
+      "require": "./linear/*.js"
+    },
+    "./linear/*.js": {
+      "types": "./linear/*.d.ts",
+      "import": "./linear/esm/*.js",
+      "require": "./linear/*.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": ">= 3"
+  }
+}
