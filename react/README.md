@@ -3,9 +3,9 @@
 <p align="center">
   <a href="https://uiastra.com" target="_blank">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/dark.jpg">
-      <source media="(prefers-color-scheme: light)" srcset=".github/light.jpg">
-      <img alt="AstraIcons" style="max-width: 100%" src=".github/light.jpg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/uiastra/astraicons/HEAD/.github/dark.jpg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/uiastra/astraicons/HEAD/.github/light.jpg">
+      <img alt="AstraIcons" style="max-width: 100%" src="https://raw.githubusercontent.com/uiastra/astraicons/HEAD/.github/light.jpg">
     </picture>
   </a>
 </p>
