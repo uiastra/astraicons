@@ -1,6 +1,6 @@
 {
   "name": "astraicons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
   "repository": "https://github.com/uiastra/astraicons.git",
@@ -18,7 +18,8 @@
   ],
   "scripts": {
     "prepublishOnly": "npm run build",
-    "cleanup": "rimraf ./linear ./optimized ./vue/linear ./react/linear ./bold ./vue/bold ./react/bold ./brand ./vue/brand ./react/brand",
+    "cleanup": "rimraf ./linear ./vue/linear ./react/linear ./bold ./vue/bold ./react/bold ./brand ./vue/brand ./react/brand",
+    "cleanup-optimized": "rimraf ./optimized",
     "build": "npm run build-bold && npm run build-linear && npm run build-brand && npm run build-react && npm run build-vue",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
