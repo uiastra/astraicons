@@ -22,9 +22,9 @@
     "build": "npm run build-bold && npm run build-linear && npm run build-brand && npm run build-react && npm run build-vue",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
-    "build-linear": "rimraf ./linear ./optimized/linear && svgo --config=svgo.linear.mjs -f ./icons/linear -o ./optimized/linear --pretty --indent=2 && mkdir -p ./linear && cp -R ./optimized/linear ./linear",
-    "build-bold": "rimraf ./bold ./optimized/bold && svgo --config=svgo.bold.mjs -f ./icons/bold -o ./optimized/bold --pretty --indent=2 && mkdir -p ./bold && cp -R ./optimized/bold ./bold",
-    "build-brand": "rimraf ./brand ./optimized/brand && svgo --config=svgo.brand.mjs -f ./icons/brand -o ./optimized/brand --pretty --indent=2 && mkdir -p ./brand && cp -R ./optimized/brand ./brand"
+    "build-linear": "rimraf ./linear ./optimized/linear && svgo --config=svgo.linear.mjs -f ./icons/linear -o ./optimized/linear --pretty --indent=2 && mkdir -p ./linear && cp -R ./optimized/linear/* ./linear",
+    "build-bold": "rimraf ./bold ./optimized/bold && svgo --config=svgo.bold.mjs -f ./icons/bold -o ./optimized/bold --pretty --indent=2 && mkdir -p ./bold && cp -R ./optimized/bold/* ./bold",
+    "build-brand": "rimraf ./brand ./optimized/brand && svgo --config=svgo.brand.mjs -f ./icons/brand -o ./optimized/brand --pretty --indent=2 && mkdir -p ./brand && cp -R ./optimized/brand/* ./brand"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
