@@ -18,6 +18,7 @@
     "linear",
     "bold",
     "brand",
+    "duotone",
     "index.esm.js",
     "index.js",
     "LICENSE",
@@ -76,6 +77,21 @@
       "types": "./linear/*.d.ts",
       "import": "./linear/esm/*.js",
       "require": "./linear/*.js"
+    },
+    "./duotone": {
+      "types": "./duotone/index.d.ts",
+      "import": "./duotone/esm/index.js",
+      "require": "./duotone/index.js"
+    },
+    "./duotone/*": {
+      "types": "./duotone/*.d.ts",
+      "import": "./duotone/esm/*.js",
+      "require": "./duotone/*.js"
+    },
+    "./duotone/*.js": {
+      "types": "./duotone/*.d.ts",
+      "import": "./duotone/esm/*.js",
+      "require": "./duotone/*.js"
     }
   },
   "publishConfig": {

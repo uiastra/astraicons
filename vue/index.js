@@ -9,7 +9,7 @@ module.exports = new Proxy(
       }
 
       throw new Error(
-        `Importing from \`@astraicons/vue\` directly is not supported. Please import from either \`@astraicons/vue/bold\`, \`@astraicons/vue/linear\`, or \`@astraicons/vue/brand\` instead.`
+        `Importing from \`@astraicons/vue\` directly is not supported. Please import from either \`@astraicons/vue/bold\`, \`@astraicons/vue/linear\`, \`@astraicons/vue/duotone\`, or \`@astraicons/vue/brand\` instead.`
       );
     },
   }

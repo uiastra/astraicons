@@ -224,19 +224,28 @@ async function main(package) {
     buildIcons(package, "bold", "esm"),
     buildIcons(package, "linear", "cjs"),
     buildIcons(package, "linear", "esm"),
+    buildIcons(package, "duotone", "cjs"),
+    buildIcons(package, "duotone", "esm"),
     ensureWriteJson(`./${package}/brand/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${package}/brand/package.json`, cjsPackageJson),
     ensureWriteJson(`./${package}/bold/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${package}/bold/package.json`, cjsPackageJson),
     ensureWriteJson(`./${package}/linear/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${package}/linear/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${package}/duotone/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${package}/duotone/package.json`, cjsPackageJson),
   ]);
 
   let packageJson = JSON.parse(
     await fs.readFile(`./${package}/package.json`, "utf8")
   );
 
-  packageJson.exports = await buildExports(["brand", "bold", "linear"]);
+  packageJson.exports = await buildExports([
+    "brand",
+    "bold",
+    "linear",
+    "duotone",
+  ]);
 
   await ensureWriteJson(`./${package}/package.json`, packageJson);
 

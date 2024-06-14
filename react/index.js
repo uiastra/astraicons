@@ -9,7 +9,7 @@ module.exports = new Proxy(
       }
 
       throw new Error(
-        `Importing from \`@astraicons/react\` directly is not supported. Please import from either \`@astraicons/react/bold\`, \`@astraicons/react/linear\`, or \`@astraicons/react/brand\` instead.`
+        `Importing from \`@astraicons/react\` directly is not supported. Please import from either \`@astraicons/react/bold\`, \`@astraicons/react/linear\`, \`@astraicons/react/duotone\`, or \`@astraicons/react/brand\` instead.`
       );
     },
   }
