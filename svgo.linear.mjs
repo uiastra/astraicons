@@ -7,7 +7,12 @@ export default {
     {
       name: "removeAttrs",
       params: {
-        attrs: ["stroke", "path:stroke-width", "rect:stroke-width"],
+        attrs: [
+          "stroke",
+          "path:stroke-width",
+          "rect:stroke-width",
+          "circle:stroke-width",
+        ],
       },
     },
     {
