@@ -1,5 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 22L7.82299 22C2.63693 22 0.513225 18.0906 3.10626 13.3068L5.19476 9.44731L7.28326 5.58782C9.87629 0.804058 14.1237 0.804058 16.7167 5.58782L18.8052 9.44731L20.8937 13.3068C23.4868 18.0906 21.3631 22 16.177 22L12 22Z" stroke="#4E5964" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.4" d="M12 13L12 8" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<circle opacity="0.4" cx="12" cy="17" r="1" fill="#4E5964"/>
+<path d="M12.002 21L8.24264 21C3.57519 21 1.66386 17.4815 3.99758 13.1761L5.87724 9.70258L7.75689 6.22904C10.0906 1.92365 13.9133 1.92365 16.247 6.22904L18.1267 9.70257L20.0063 13.1761C22.3401 17.4815 20.4287 21 15.7613 21L12.002 21Z" stroke="#4E5964" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.4" d="M12.002 14.1501L12.002 8" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.4" d="M12.001 16.8914C11.863 16.8914 11.751 17.0034 11.752 17.1414C11.752 17.2794 11.864 17.3914 12.002 17.3914C12.14 17.3914 12.252 17.2794 12.252 17.1414C12.252 17.0034 12.14 16.8914 12.001 16.8914" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
