@@ -1,6 +1,7 @@
 {
   "name": "astraicons",
-  "version": "0.8.0",
+  "version": "1.0.0",
+  "type": "module",
   "license": "MIT",
   "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
   "repository": "https://github.com/uiastra/astraicons.git",
@@ -30,13 +31,16 @@
     "build-duotone": "rimraf ./duotone ./optimized/duotone && svgo --config=svgo.duotone.mjs -f ./icons/duotone -o ./optimized/duotone --pretty --indent=2 && mkdir -p ./duotone && cp -R ./optimized/duotone/* ./duotone"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.7",
-    "@babel/plugin-transform-react-jsx": "^7.24.7",
-    "@svgr/core": "^5.5.0",
-    "@vue/compiler-dom": "^3.4.27",
-    "camelcase": "^6.0.0",
-    "prettier": "^2.8.7",
-    "rimraf": "^5.0.7",
-    "svgo": "^3.3.2"
+    "@babel/core": "^7.28.3",
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@vue/compiler-dom": "^3.5.20",
+    "camelcase": "^8.0.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "svgo": "^4.0.0"
   }
 }

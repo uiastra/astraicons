@@ -1,22 +1,26 @@
-const fs = require("fs").promises;
-const camelcase = require("camelcase");
-const { rimraf } = require("rimraf");
-const svgr = require("@svgr/core").default;
-const babel = require("@babel/core");
-const { compile: compileVue } = require("@vue/compiler-dom");
-const { dirname } = require("path");
-const { deprecated } = require("./deprecated");
+import { promises as fs } from "node:fs";
+import camelcase from "camelcase";
+import { rimraf } from "rimraf";
+import { transform as svgr } from "@svgr/core";
+import * as babel from "@babel/core";
+import { compile as compileVue } from "@vue/compiler-dom";
+import { dirname } from "node:path";
+import { deprecated } from "./deprecated.js";
 
 let transform = {
   react: async (svg, componentName, format, isDeprecated) => {
     let component = await svgr(
       svg,
-      { ref: true, titleProp: true },
+      { 
+        plugins: ['@svgr/plugin-jsx'],
+        ref: true, 
+        titleProp: true 
+      },
       { componentName }
     );
     let { code } = await babel.transformAsync(component, {
       plugins: [
-        [require("@babel/plugin-transform-react-jsx"), { useBuiltIns: true }],
+        ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
       ],
     });
 
@@ -36,6 +40,10 @@ let transform = {
       .replace(
         'import * as React from "react"',
         'const React = require("react")'
+      )
+      .replace(
+        'import { forwardRef } from "react"',
+        'const { forwardRef } = require("react")'
       )
       .replace("export default", "module.exports =");
   },
@@ -106,8 +114,8 @@ async function ensureWriteJson(file, json) {
   await ensureWrite(file, JSON.stringify(json, null, 2) + "\n");
 }
 
-async function buildIcons(package, style, format) {
-  let outDir = `./${package}/${style}`;
+async function buildIcons(packageName, style, format) {
+  let outDir = `./${packageName}/${style}`;
   if (format === "esm") {
     outDir += "/esm";
   }
@@ -116,7 +124,7 @@ async function buildIcons(package, style, format) {
 
   await Promise.all(
     icons.flatMap(async ({ componentName, svg, isDeprecated }) => {
-      let content = await transform[package](
+      let content = await transform[packageName](
         svg,
         componentName,
         format,
@@ -126,7 +134,7 @@ async function buildIcons(package, style, format) {
       /** @type {string[]} */
       let types = [];
 
-      if (package === "react") {
+      if (packageName === "react") {
         types.push(`import * as React from 'react';`);
         if (isDeprecated) {
           types.push(`/** @deprecated */`);
@@ -204,40 +212,40 @@ async function buildExports(styles) {
   return pkg;
 }
 
-async function main(package) {
+async function main(packageName) {
   const cjsPackageJson = { module: "./esm/index.js", sideEffects: false };
   const esmPackageJson = { type: "module", sideEffects: false };
 
-  console.log(`Building ${package} package...`);
+  console.log(`Building ${packageName} package...`);
 
   await Promise.all([
-    rimraf(`./${package}/brand/*`),
-    rimraf(`./${package}/duo-tone/*`),
-    rimraf(`./${package}/bold/*`),
-    rimraf(`./${package}/linear/*`),
+    rimraf(`./${packageName}/brand/*`),
+    rimraf(`./${packageName}/duo-tone/*`),
+    rimraf(`./${packageName}/bold/*`),
+    rimraf(`./${packageName}/linear/*`),
   ]);
 
   await Promise.all([
-    buildIcons(package, "brand", "cjs"),
-    buildIcons(package, "brand", "esm"),
-    buildIcons(package, "bold", "cjs"),
-    buildIcons(package, "bold", "esm"),
-    buildIcons(package, "linear", "cjs"),
-    buildIcons(package, "linear", "esm"),
-    buildIcons(package, "duotone", "cjs"),
-    buildIcons(package, "duotone", "esm"),
-    ensureWriteJson(`./${package}/brand/esm/package.json`, esmPackageJson),
-    ensureWriteJson(`./${package}/brand/package.json`, cjsPackageJson),
-    ensureWriteJson(`./${package}/bold/esm/package.json`, esmPackageJson),
-    ensureWriteJson(`./${package}/bold/package.json`, cjsPackageJson),
-    ensureWriteJson(`./${package}/linear/esm/package.json`, esmPackageJson),
-    ensureWriteJson(`./${package}/linear/package.json`, cjsPackageJson),
-    ensureWriteJson(`./${package}/duotone/esm/package.json`, esmPackageJson),
-    ensureWriteJson(`./${package}/duotone/package.json`, cjsPackageJson),
+    buildIcons(packageName, "brand", "cjs"),
+    buildIcons(packageName, "brand", "esm"),
+    buildIcons(packageName, "bold", "cjs"),
+    buildIcons(packageName, "bold", "esm"),
+    buildIcons(packageName, "linear", "cjs"),
+    buildIcons(packageName, "linear", "esm"),
+    buildIcons(packageName, "duotone", "cjs"),
+    buildIcons(packageName, "duotone", "esm"),
+    ensureWriteJson(`./${packageName}/brand/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/brand/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${packageName}/bold/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/bold/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${packageName}/linear/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/linear/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${packageName}/duotone/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/duotone/package.json`, cjsPackageJson),
   ]);
 
   let packageJson = JSON.parse(
-    await fs.readFile(`./${package}/package.json`, "utf8")
+    await fs.readFile(`./${packageName}/package.json`, "utf8")
   );
 
   packageJson.exports = await buildExports([
@@ -247,15 +255,15 @@ async function main(package) {
     "duotone",
   ]);
 
-  await ensureWriteJson(`./${package}/package.json`, packageJson);
+  await ensureWriteJson(`./${packageName}/package.json`, packageJson);
 
-  return console.log(`Finished building ${package} package.`);
+  return console.log(`Finished building ${packageName} package.`);
 }
 
-let [package] = process.argv.slice(2);
+let [packageName] = process.argv.slice(2);
 
-if (!package) {
+if (!packageName) {
   throw new Error("Please specify a package");
 }
 
-main(package);
+main(packageName);
