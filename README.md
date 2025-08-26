@@ -10,13 +10,99 @@
   </a>
 </p>
 
-## Getting Started
+<p align="center">
+  A comprehensive icon library designed for modern web applications, featuring 880 beautifully crafted icons across multiple styles.
+</p>
 
-The easiest way to utilize these icons is to copy the SVG source from [uiastra.com](https://uiastra.com) and directly embed it into your HTML:
+<p align="center">
+  <a href="https://www.npmjs.com/package/@astraicons/react"><img src="https://img.shields.io/npm/v/@astraicons/react?label=@astraicons/react&color=blue" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@astraicons/vue"><img src="https://img.shields.io/npm/v/@astraicons/vue?label=@astraicons/vue&color=green" alt="npm version"></a>
+  <a href="https://github.com/uiastra/astraicons/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+</p>
+
+## ✨ Features
+
+- **880 Total Icons** - Comprehensive collection for all your UI needs
+- **4 Distinct Styles** - Linear, Bold, Duotone, and Brand icons
+- **288 Unique Icons** - Each available in multiple styles
+- **16 Brand Icons** - Popular company and service logos
+- **Framework Support** - Official React and Vue packages
+- **TypeScript Support** - Fully typed for better developer experience
+- **Tree Shakeable** - Import only the icons you need
+- **Customizable** - Easy to style with CSS or utility classes
+- **Accessible** - Built with accessibility in mind
+
+## 📦 Installation
+
+### React
+
+```bash
+npm install @astraicons/react
+# or
+yarn add @astraicons/react
+# or
+pnpm add @astraicons/react
+```
+
+### Vue
+
+```bash
+npm install @astraicons/vue
+# or
+yarn add @astraicons/vue
+# or
+pnpm add @astraicons/vue
+```
+
+## 🚀 Quick Start
+
+### React
+
+```jsx
+import { HomeIcon } from '@astraicons/react/linear';
+import { HeartIcon } from '@astraicons/react/bold';
+import { StarIcon } from '@astraicons/react/duotone';
+import { AppleIcon } from '@astraicons/react/brand';
+
+function MyComponent() {
+  return (
+    <div>
+      <HomeIcon className="w-6 h-6 text-gray-500" />
+      <HeartIcon className="w-6 h-6 text-red-500" />
+      <StarIcon className="w-6 h-6 text-yellow-500" />
+      <AppleIcon className="w-8 h-8" />
+    </div>
+  );
+}
+```
+
+### Vue
+
+```vue
+<template>
+  <div>
+    <HomeIcon class="w-6 h-6 text-gray-500" />
+    <HeartIcon class="w-6 h-6 text-red-500" />
+    <StarIcon class="w-6 h-6 text-yellow-500" />
+    <AppleIcon class="w-8 h-8" />
+  </div>
+</template>
+
+<script setup>
+import { HomeIcon } from '@astraicons/vue/linear';
+import { HeartIcon } from '@astraicons/vue/bold';
+import { StarIcon } from '@astraicons/vue/duotone';
+import { AppleIcon } from '@astraicons/vue/brand';
+</script>
+```
+
+### Direct SVG Usage
+
+Copy the SVG source from [uiastra.com](https://uiastra.com) and embed it directly into your HTML:
 
 ```html
 <svg
-  class="size-6 text-gray-500"
+  class="w-6 h-6 text-gray-500"
   fill="none"
   viewBox="0 0 24 24"
   stroke="currentColor"
@@ -39,76 +125,161 @@ The easiest way to utilize these icons is to copy the SVG source from [uiastra.c
 </svg>
 ```
 
-These icons are designed to be easily styled by modifying the `color` CSS property, either directly or through utility classes such as `text-gray-500` in frameworks like [Tailwind CSS](https://tailwindcss.com).
+## 🎨 Icon Styles
 
-## React Integration
+### Linear
 
-Begin by installing `@astraicons/react` from npm:
+Outline style icons with consistent 1.5px stroke width. Perfect for modern, minimalist interfaces.
 
-```sh
-npm install @astraicons/react
+```jsx
+import { ActivityIcon, BellIcon, CameraIcon } from '@astraicons/react/linear';
 ```
 
-Then import each icon individually as a React component:
+### Bold
 
-```js
-import { GlobalIcon } from "@astraicons/react/linear";
+Filled or bold stroke icons for emphasis and better visibility at smaller sizes.
 
-function MyComponent() {
-  return (
-    <div>
-      <GlobalIcon className="size-6 text-blue-500" />
-      <p>...</p>
-    </div>
-  );
+```jsx
+import { ActivityIcon, BellIcon, CameraIcon } from '@astraicons/react/bold';
+```
+
+### Duotone
+
+Two-tone icons that combine filled and outline styles for depth and visual interest.
+
+```jsx
+import { ActivityIcon, BellIcon, CameraIcon } from '@astraicons/react/duotone';
+```
+
+### Brand
+
+Company and service logos including social media platforms and popular brands.
+
+```jsx
+import { AppleIcon, GoogleIcon, TwitterIcon } from '@astraicons/react/brand';
+```
+
+## 📋 Icon Naming Convention
+
+Icons follow a consistent naming pattern:
+
+- Upper camel case (PascalCase)
+- Always end with `Icon` suffix
+- Descriptive names for easy discovery
+
+Examples:
+
+- `HomeIcon`
+- `ShoppingCartIcon`
+- `ArrowRightIcon`
+- `UserProfileIcon`
+
+## 🔧 Customization
+
+### Using Tailwind CSS
+
+```jsx
+<HomeIcon className="w-8 h-8 text-blue-500 hover:text-blue-600 transition-colors" />
+```
+
+### Using Inline Styles
+
+```jsx
+<HomeIcon style={{ width: 32, height: 32, color: '#3B82F6' }} />
+```
+
+### Using CSS
+
+```css
+.custom-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #3B82F6;
 }
 ```
 
-The 24x24 linear icons can be imported from `@astraicons/react/linear`, the 24x24 bold icons from `@astraicons/react/bold`, and the 24x24 brand icons from `@astraicons/react/brand`.
-
-Icons are named using upper camel case and always end with `Icon`.
-
-[View the full list of icon names on UNPKG &rarr;](https://unpkg.com/browse/@astraicons/react/linear/)
-
-## Vue Integration
-
-First, install `@astraicons/vue` from npm:
-
-```sh
-npm install @astraicons/vue
+```jsx
+<HomeIcon className="custom-icon" />
 ```
 
-Next, import each icon individually as a Vue component:
+## 📚 Documentation
 
-```vue
-<template>
-  <div>
-    <GlobalIcon class="size-6 text-blue-500" />
-    <p>...</p>
-  </div>
-</template>
+- [Full Icon List](./ICON_LIST.md) - Complete alphabetical list of all 877 icons
+- [Icons by Category](./ICON_CATEGORIES.md) - Icons organized by functional groups
+- [Browse React Icons](https://unpkg.com/browse/@astraicons/react/) - View all React icons on UNPKG
+- [Browse Vue Icons](https://unpkg.com/browse/@astraicons/vue/) - View all Vue icons on UNPKG
+- [Interactive Gallery](https://uiastra.com) - Search and preview all icons
 
-<script setup>
-import { GlobalIcon } from "@astraicons/vue/linear";
-</script>
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
+
+## 📦 Package Details
+
+### React Package
+- **Package**: `@astraicons/react`
+- **Version**: 1.0.1
+- **Size**: ~14MB unpacked
+- **Files**: 3,524 (JS + TypeScript definitions)
+- **Tree-shakeable**: ✅
+- **TypeScript**: ✅
+- **Peer Dependencies**: React >= 16
+
+### Vue Package
+- **Package**: `@astraicons/vue`
+- **Version**: 1.0.1
+- **Size**: ~14MB unpacked
+- **Files**: 3,524 (JS + TypeScript definitions)
+- **Tree-shakeable**: ✅
+- **TypeScript**: ✅
+- **Peer Dependencies**: Vue >= 3
+
+## 🤝 Contributing
+
+We welcome contributions to improve the library! However, please note:
+
+- ✅ **Bug fixes** - Report or fix issues with existing icons
+- ✅ **TypeScript improvements** - Enhance type definitions
+- ✅ **Documentation** - Improve guides and examples
+- ✅ **Performance** - Optimize build process or package size
+- ❌ **New icons** - We're not accepting new icon contributions at this time
+
+### Development Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/uiastra/astraicons.git
+cd astraicons
+
+# Install dependencies
+npm install
+
+# Build all packages
+npm run build
+
+# Build specific style
+npm run build-linear
+npm run build-bold
+npm run build-duotone
+npm run build-brand
 ```
 
-The 24x24 linear icons can be imported from `@astraicons/vue/linear`, the 24x24 bold icons from `@astraicons/vue/bold`, and the 24x24 brand icons from `@astraicons/vue/brand`.
+## 🙏 Credits
 
-Icons follow an upper camel case naming convention and always end with `Icon`.
+- Icon design and curation by [UI Astra](https://uiastra.com)
+- Build system inspired by [Heroicons](https://github.com/tailwindlabs/heroicons)
+- Created with ❤️ for the developer community
 
-[View the full list of icon names on UNPKG &rarr;](https://unpkg.com/browse/@astraicons/vue/linear/)
+## 📄 License
 
-## Contributing
+This library is MIT licensed. See [LICENSE](./LICENSE) for details.
 
-While we welcome contributions to enhance the project, our current focus is on resolving issues like incorrect TypeScript types or improperly exported icons.
+---
 
-**Please note that we are not accepting contributions for new icons.**
-
-## Credit
-
-This project uses parts from the [HeroIcons](https://github.com/tailwindlabs/heroicons) library from [TailwindLabs](https://github.com/tailwindlabs).
-
-## License
-
-This library is released under the MIT license.
+<p align="center">
+  Made with ❤️ by <a href="https://uiastra.com">UI Astra</a>
+</p>
