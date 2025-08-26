@@ -15,4 +15,7 @@ yarn-error.log*
 # build files
 /bold
 /linear
+/duotone
 /brand
+
+/optimized
