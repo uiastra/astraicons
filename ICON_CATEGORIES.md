@@ -4,8 +4,9 @@ A categorized list of all icons available in the @astraicons/react package v1.0.
 
 ## Quick Stats
 - **Total Unique Icons**: 287 (each available in Linear, Bold, and Duotone styles)
-- **Brand Icons**: 16
-- **Total Icons**: 877
+- **Brand Icons**: 18
+- **3D Icons**: 30
+- **Total Icons**: 909
 
 ## Usage Example
 
@@ -14,6 +15,7 @@ import { HomeIcon } from '@astraicons/react/linear';
 import { HeartIcon } from '@astraicons/react/bold';
 import { StarIcon } from '@astraicons/react/duotone';
 import { AppleIcon } from '@astraicons/react/brand';
+import { CubeIcon } from '@astraicons/react/3d';
 
 function MyComponent() {
   return (
@@ -22,6 +24,7 @@ function MyComponent() {
       <HeartIcon className="w-6 h-6 text-red-500" />
       <StarIcon className="w-6 h-6 text-yellow-500" />
       <AppleIcon className="w-8 h-8" />
+      <CubeIcon className="w-8 h-8 text-purple-500" />
     </div>
   );
 }
@@ -375,7 +378,7 @@ function MyComponent() {
 - `WaveIcon`
 - `ZipIcon`
 
-## Brand Icons (16)
+## Brand Icons (18)
 
 - `BehanceIcon`
 - `DiscordIcon`
@@ -394,5 +397,51 @@ function MyComponent() {
 - `XIcon`
 - `YoutubeIcon`
 
+## 3D Icons (30)
+
+Modern three-dimensional icons with depth and perspective. Available only in 3D style.
+
+```jsx
+import { CubeIcon } from '@astraicons/react/3d';
+```
+
+### Status & Notifications
+- `AssistanceIcon`
+- `Error404Icon`
+- `ErrorIcon`
+- `InformationIcon`
+- `SecurityIcon`
+- `SuccessIcon`
+- `WarningIcon`
+
+### Geometric Shapes
+- `CubeIcon`
+- `CubicClusterIcon`
+- `CylinderIcon`
+- `ExtendedCubeIcon`
+- `HelixStripIcon`
+- `IcosahedronIcon`
+- `ObliqueTorus`
+- `Ring2Icon`
+- `SlantedHelixIcon`
+- `SlantedTetrahedronIcon`
+- `SphereIcon`
+- `TetrahedronIcon`
+- `TorusIcon`
+- `TubeRingIcon`
+
+### Cryptocurrency
+- `BinanceCoinIcon`
+- `BitcoinIcon`
+- `BlockchainIcon`
+- `EthereumIcon`
+- `TetherIcon`
+
+### Other
+- `CloverIcon`
+- `CreditCardIcon`
+- `CrossIcon`
+- `TimeIcon`
+
 ---
-Generated on 2025-08-26
+Generated on 2025-10-18

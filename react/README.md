@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  Beautiful React icons from the Astra Icons collection. 880 icons across 4 styles.
+  Beautiful React icons from the Astra Icons collection. 900+ icons across 5 styles.
 </p>
 
 <p align="center">
@@ -39,6 +39,7 @@ import { HomeIcon } from '@astraicons/react/linear';
 import { HeartIcon } from '@astraicons/react/bold';
 import { StarIcon } from '@astraicons/react/duotone';
 import { AppleIcon } from '@astraicons/react/brand';
+import { CubeIcon } from '@astraicons/react/3d';
 
 function MyComponent() {
   return (
@@ -47,6 +48,7 @@ function MyComponent() {
       <HeartIcon className="w-6 h-6 text-red-500" />
       <StarIcon className="w-6 h-6 text-yellow-500" />
       <AppleIcon className="w-8 h-8" />
+      <CubeIcon className="w-8 h-8 text-purple-500" />
     </div>
   );
 }
@@ -75,11 +77,18 @@ Two-tone icons that combine filled and outline styles for depth and visual inter
 import { ActivityIcon, BellIcon, CameraIcon } from '@astraicons/react/duotone';
 ```
 
-### Brand (16 icons)
+### Brand (18 icons)
 Company and service logos including social media platforms and popular brands.
 
 ```jsx
 import { AppleIcon, GoogleIcon, TwitterIcon } from '@astraicons/react/brand';
+```
+
+### 3D (32 icons)
+Modern three-dimensional style icons with depth and perspective for contemporary interfaces.
+
+```jsx
+import { CubeIcon, FolderIcon, BoxIcon } from '@astraicons/react/3d';
 ```
 
 ## Props

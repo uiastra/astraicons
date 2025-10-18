@@ -22,10 +22,11 @@
 
 ## ✨ Features
 
-- **880 Total Icons** - Comprehensive collection for all your UI needs
-- **4 Distinct Styles** - Linear, Bold, Duotone, and Brand icons
+- **900+ Total Icons** - Comprehensive collection for all your UI needs
+- **5 Distinct Styles** - Linear, Bold, Duotone, Brand, and 3D icons
 - **288 Unique Icons** - Each available in multiple styles
-- **16 Brand Icons** - Popular company and service logos
+- **32 3D Icons** - Modern three-dimensional style icons
+- **18 Brand Icons** - Popular company and service logos
 - **Framework Support** - Official React and Vue packages
 - **TypeScript Support** - Fully typed for better developer experience
 - **Tree Shakeable** - Import only the icons you need
@@ -63,6 +64,7 @@ import { HomeIcon } from '@astraicons/react/linear';
 import { HeartIcon } from '@astraicons/react/bold';
 import { StarIcon } from '@astraicons/react/duotone';
 import { AppleIcon } from '@astraicons/react/brand';
+import { CubeIcon } from '@astraicons/react/3d';
 
 function MyComponent() {
   return (
@@ -71,6 +73,7 @@ function MyComponent() {
       <HeartIcon className="w-6 h-6 text-red-500" />
       <StarIcon className="w-6 h-6 text-yellow-500" />
       <AppleIcon className="w-8 h-8" />
+      <CubeIcon className="w-8 h-8 text-purple-500" />
     </div>
   );
 }
@@ -85,6 +88,7 @@ function MyComponent() {
     <HeartIcon class="w-6 h-6 text-red-500" />
     <StarIcon class="w-6 h-6 text-yellow-500" />
     <AppleIcon class="w-8 h-8" />
+    <CubeIcon class="w-8 h-8 text-purple-500" />
   </div>
 </template>
 
@@ -93,6 +97,7 @@ import { HomeIcon } from '@astraicons/vue/linear';
 import { HeartIcon } from '@astraicons/vue/bold';
 import { StarIcon } from '@astraicons/vue/duotone';
 import { AppleIcon } from '@astraicons/vue/brand';
+import { CubeIcon } from '@astraicons/vue/3d';
 </script>
 ```
 
@@ -157,6 +162,14 @@ Company and service logos including social media platforms and popular brands.
 
 ```jsx
 import { AppleIcon, GoogleIcon, TwitterIcon } from '@astraicons/react/brand';
+```
+
+### 3D
+
+Modern three-dimensional style icons with depth and perspective for contemporary interfaces.
+
+```jsx
+import { CubeIcon, FolderIcon, BoxIcon } from '@astraicons/react/3d';
 ```
 
 ## 📋 Icon Naming Convention
@@ -266,6 +279,7 @@ npm run build-linear
 npm run build-bold
 npm run build-duotone
 npm run build-brand
+npm run build-3d
 ```
 
 ## 🙏 Credits
