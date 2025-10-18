@@ -1,7 +1,7 @@
 {
   "name": "@astraicons/react",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
   "keywords": [
     "uiastra",
@@ -19,6 +19,7 @@
     "bold",
     "brand",
     "duotone",
+    "3d",
     "index.esm.js",
     "index.js",
     "LICENSE",
@@ -92,6 +93,21 @@
       "types": "./duotone/*.d.ts",
       "import": "./duotone/esm/*.js",
       "require": "./duotone/*.js"
+    },
+    "./3d": {
+      "types": "./3d/index.d.ts",
+      "import": "./3d/esm/index.js",
+      "require": "./3d/index.js"
+    },
+    "./3d/*": {
+      "types": "./3d/*.d.ts",
+      "import": "./3d/esm/*.js",
+      "require": "./3d/*.js"
+    },
+    "./3d/*.js": {
+      "types": "./3d/*.d.ts",
+      "import": "./3d/esm/*.js",
+      "require": "./3d/*.js"
     }
   },
   "publishConfig": {
