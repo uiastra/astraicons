@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  Beautiful Vue 3 icons from the Astra Icons collection. 880 icons across 4 styles.
+  Beautiful Vue 3 icons from the Astra Icons collection. 900+ icons across 5 styles.
 </p>
 
 <p align="center">
@@ -41,6 +41,7 @@ Import icons from their respective style directories:
     <HeartIcon class="w-6 h-6 text-red-500" />
     <StarIcon class="w-6 h-6 text-yellow-500" />
     <AppleIcon class="w-8 h-8" />
+    <CubeIcon class="w-8 h-8 text-purple-500" />
   </div>
 </template>
 
@@ -49,6 +50,7 @@ import { HomeIcon } from '@astraicons/vue/linear';
 import { HeartIcon } from '@astraicons/vue/bold';
 import { StarIcon } from '@astraicons/vue/duotone';
 import { AppleIcon } from '@astraicons/vue/brand';
+import { CubeIcon } from '@astraicons/vue/3d';
 </script>
 ```
 
@@ -75,11 +77,18 @@ Two-tone icons that combine filled and outline styles for depth and visual inter
 import { ActivityIcon, BellIcon, CameraIcon } from '@astraicons/vue/duotone';
 ```
 
-### Brand (16 icons)
+### Brand (18 icons)
 Company and service logos including social media platforms and popular brands.
 
 ```js
 import { AppleIcon, GoogleIcon, TwitterIcon } from '@astraicons/vue/brand';
+```
+
+### 3D (32 icons)
+Modern three-dimensional style icons with depth and perspective for contemporary interfaces.
+
+```js
+import { CubeIcon, FolderIcon, BoxIcon } from '@astraicons/vue/3d';
 ```
 
 ## Props
