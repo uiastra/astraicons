@@ -1,6 +1,13 @@
 export default {
   plugins: [
-    'preset-default',
+    {
+      name: 'preset-default',
+      params: {
+        overrides: {
+          cleanupIds: false,
+        },
+      },
+    },
     'removeDimensions',
     'sortAttrs',
     'cleanupListOfValues',
