@@ -83,13 +83,38 @@ let transform = {
 async function getIcons(style) {
   let files = await fs.readdir(`./optimized/${style}`);
   return Promise.all(
-    files.map(async (file) => ({
-      svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
-      componentName: `${camelcase(file.replace(/\.svg$/, ""), {
+    files.map(async (file) => {
+      // Remove .svg extension and sanitize the filename
+      let fileName = file.replace(/\.svg$/, "");
+
+      // Replace common special characters with word equivalents
+      fileName = fileName
+        .replace(/&/g, "And")
+        .replace(/%/g, "Percent")
+        .replace(/\+/g, "Plus")
+        .replace(/@/g, "At")
+        .replace(/\$/g, "Dollar")
+        .replace(/!/g, "Exclamation")
+        .replace(/\?/g, "Question");
+
+      // Remove any remaining characters that aren't alphanumeric, spaces, hyphens, or underscores
+      fileName = fileName.replace(/[^a-zA-Z0-9\s\-_]/g, "");
+
+      let baseName = camelcase(fileName, {
         pascalCase: true,
-      })}Icon`,
-      isDeprecated: deprecated.includes(file),
-    }))
+      });
+
+      // If the component name starts with a number, prefix it with "Icon"
+      let componentName = /^[0-9]/.test(baseName)
+        ? `Icon${baseName}`
+        : `${baseName}Icon`;
+
+      return {
+        svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
+        componentName,
+        isDeprecated: deprecated.includes(file),
+      };
+    })
   );
 }
 
