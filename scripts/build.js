@@ -224,6 +224,7 @@ async function main(packageName) {
     rimraf(`./${packageName}/bold/*`),
     rimraf(`./${packageName}/linear/*`),
     rimraf(`./${packageName}/3d/*`),
+    rimraf(`./${packageName}/illustrations/*`),
   ]);
 
   await Promise.all([
@@ -237,6 +238,8 @@ async function main(packageName) {
     buildIcons(packageName, "duotone", "esm"),
     buildIcons(packageName, "3d", "cjs"),
     buildIcons(packageName, "3d", "esm"),
+    buildIcons(packageName, "illustrations", "cjs"),
+    buildIcons(packageName, "illustrations", "esm"),
     ensureWriteJson(`./${packageName}/brand/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${packageName}/brand/package.json`, cjsPackageJson),
     ensureWriteJson(`./${packageName}/bold/esm/package.json`, esmPackageJson),
@@ -247,6 +250,8 @@ async function main(packageName) {
     ensureWriteJson(`./${packageName}/duotone/package.json`, cjsPackageJson),
     ensureWriteJson(`./${packageName}/3d/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${packageName}/3d/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${packageName}/illustrations/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/illustrations/package.json`, cjsPackageJson),
   ]);
 
   let packageJson = JSON.parse(
