@@ -220,7 +220,7 @@ async function main(packageName) {
 
   await Promise.all([
     rimraf(`./${packageName}/brand/*`),
-    rimraf(`./${packageName}/duo-tone/*`),
+    rimraf(`./${packageName}/duotone/*`),
     rimraf(`./${packageName}/bold/*`),
     rimraf(`./${packageName}/linear/*`),
     rimraf(`./${packageName}/3d/*`),
@@ -264,6 +264,7 @@ async function main(packageName) {
     "linear",
     "duotone",
     "3d",
+    "illustrations",
   ]);
 
   await ensureWriteJson(`./${packageName}/package.json`, packageJson);
