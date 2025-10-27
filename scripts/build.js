@@ -83,13 +83,38 @@ let transform = {
 async function getIcons(style) {
   let files = await fs.readdir(`./optimized/${style}`);
   return Promise.all(
-    files.map(async (file) => ({
-      svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
-      componentName: `${camelcase(file.replace(/\.svg$/, ""), {
+    files.map(async (file) => {
+      // Remove .svg extension and sanitize the filename
+      let fileName = file.replace(/\.svg$/, "");
+
+      // Replace common special characters with word equivalents
+      fileName = fileName
+        .replace(/&/g, "And")
+        .replace(/%/g, "Percent")
+        .replace(/\+/g, "Plus")
+        .replace(/@/g, "At")
+        .replace(/\$/g, "Dollar")
+        .replace(/!/g, "Exclamation")
+        .replace(/\?/g, "Question");
+
+      // Remove any remaining characters that aren't alphanumeric, spaces, hyphens, or underscores
+      fileName = fileName.replace(/[^a-zA-Z0-9\s\-_]/g, "");
+
+      let baseName = camelcase(fileName, {
         pascalCase: true,
-      })}Icon`,
-      isDeprecated: deprecated.includes(file),
-    }))
+      });
+
+      // If the component name starts with a number, prefix it with "Icon"
+      let componentName = /^[0-9]/.test(baseName)
+        ? `Icon${baseName}`
+        : `${baseName}Icon`;
+
+      return {
+        svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
+        componentName,
+        isDeprecated: deprecated.includes(file),
+      };
+    })
   );
 }
 
@@ -220,10 +245,11 @@ async function main(packageName) {
 
   await Promise.all([
     rimraf(`./${packageName}/brand/*`),
-    rimraf(`./${packageName}/duo-tone/*`),
+    rimraf(`./${packageName}/duotone/*`),
     rimraf(`./${packageName}/bold/*`),
     rimraf(`./${packageName}/linear/*`),
     rimraf(`./${packageName}/3d/*`),
+    rimraf(`./${packageName}/illustrations/*`),
   ]);
 
   await Promise.all([
@@ -237,6 +263,8 @@ async function main(packageName) {
     buildIcons(packageName, "duotone", "esm"),
     buildIcons(packageName, "3d", "cjs"),
     buildIcons(packageName, "3d", "esm"),
+    buildIcons(packageName, "illustrations", "cjs"),
+    buildIcons(packageName, "illustrations", "esm"),
     ensureWriteJson(`./${packageName}/brand/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${packageName}/brand/package.json`, cjsPackageJson),
     ensureWriteJson(`./${packageName}/bold/esm/package.json`, esmPackageJson),
@@ -247,6 +275,8 @@ async function main(packageName) {
     ensureWriteJson(`./${packageName}/duotone/package.json`, cjsPackageJson),
     ensureWriteJson(`./${packageName}/3d/esm/package.json`, esmPackageJson),
     ensureWriteJson(`./${packageName}/3d/package.json`, cjsPackageJson),
+    ensureWriteJson(`./${packageName}/illustrations/esm/package.json`, esmPackageJson),
+    ensureWriteJson(`./${packageName}/illustrations/package.json`, cjsPackageJson),
   ]);
 
   let packageJson = JSON.parse(
@@ -259,6 +289,7 @@ async function main(packageName) {
     "linear",
     "duotone",
     "3d",
+    "illustrations",
   ]);
 
   await ensureWriteJson(`./${packageName}/package.json`, packageJson);

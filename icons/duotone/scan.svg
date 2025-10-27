@@ -1,7 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 9V7V7C21 4.79086 19.2091 3 17 3H16.3333H14" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M21 9V7C21 4.79086 19.2091 3 17 3H16.3333H14" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M21 14V16.9355C21 19.1803 19.1803 21 16.9355 21H14" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M3 9V7V7C3 4.79086 4.79086 3 7 3V3H9" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M3 14V16.9355V16.9355C3 19.1803 4.81975 21 7.06451 21H7.66667H10" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M3 9V7C3 4.79086 4.79086 3 7 3H9" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M3 14V16.9355C3 19.1803 4.81975 21 7.06451 21H7.66667H10" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <path opacity="0.4" d="M21 12H3M7 14.5C7 15.8807 8.11929 17 9.5 17H14.5C15.8807 17 17 15.8807 17 14.5V9.5C17 8.11929 15.8807 7 14.5 7L9.5 7C8.11929 7 7 8.11929 7 9.5V14.5Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

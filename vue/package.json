@@ -1,7 +1,7 @@
 {
   "name": "@astraicons/vue",
   "license": "MIT",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
   "keywords": [
     "uiastra",
@@ -20,6 +20,7 @@
     "brand",
     "duotone",
     "3d",
+    "illustrations",
     "index.esm.js",
     "index.js",
     "LICENSE",
@@ -108,6 +109,21 @@
       "types": "./3d/*.d.ts",
       "import": "./3d/esm/*.js",
       "require": "./3d/*.js"
+    },
+    "./illustrations": {
+      "types": "./illustrations/index.d.ts",
+      "import": "./illustrations/esm/index.js",
+      "require": "./illustrations/index.js"
+    },
+    "./illustrations/*": {
+      "types": "./illustrations/*.d.ts",
+      "import": "./illustrations/esm/*.js",
+      "require": "./illustrations/*.js"
+    },
+    "./illustrations/*.js": {
+      "types": "./illustrations/*.d.ts",
+      "import": "./illustrations/esm/*.js",
+      "require": "./illustrations/*.js"
     }
   },
   "publishConfig": {
