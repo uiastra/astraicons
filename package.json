@@ -1,6 +1,6 @@
 {
   "name": "astraicons",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "type": "module",
   "license": "MIT",
   "description": "A comprehensive icon set designed for websites, applications, social networks, and print media, tailored specifically for UI Astra.",
@@ -33,7 +33,6 @@
     "build-duotone": "rimraf ./duotone ./optimized/duotone && svgo --config=svgo.duotone.mjs -f ./icons/duotone -o ./optimized/duotone --pretty --indent=2 && mkdir -p ./duotone && cp -R ./optimized/duotone/* ./duotone",
     "build-3d": "rimraf ./3d ./optimized/3d && svgo --config=svgo.3d.mjs -f ./icons/3d -o ./optimized/3d --pretty --indent=2 && mkdir -p ./3d && cp -R ./optimized/3d/* ./3d",
     "build-illustrations": "rimraf ./illustrations ./optimized/illustrations && svgo --config=svgo.illustrations.mjs -f ./icons/illustrations -o ./optimized/illustrations --pretty --indent=2 && mkdir -p ./illustrations && cp -R ./optimized/illustrations/* ./illustrations"
-
   },
   "devDependencies": {
     "@babel/core": "^7.28.4",
