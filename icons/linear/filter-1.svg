@@ -1,4 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.3 13.6669V17.8669C9.3 18.6366 9.7894 19.3212 10.5177 19.5702L13.9237 20.7346C14.3043 20.8647 14.7 20.5818 14.7 20.1796V13.6669C14.7 13.3315 14.7937 13.0029 14.9705 12.7179L19.2944 5.74899C20.0384 4.54991 19.176 3 17.7649 3H6.23514C4.824 3 3.96165 4.54991 4.70563 5.749L9.02951 12.7179C9.20632 13.0029 9.3 13.3315 9.3 13.6669Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="14.7727" y1="9.01721" x2="17.1988" y2="5.22723" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8 5L21 5" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M15 12L21 12" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M9 19L21 19" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M3 5L5 5" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M3 12L12 12" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M3 19L5 19" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="5" y="3" width="3" height="4" rx="1" stroke="#4E5964" stroke-width="1.5"/>
+<rect x="12" y="10" width="3" height="4" rx="1" stroke="#4E5964" stroke-width="1.5"/>
+<rect x="6" y="17" width="3" height="4" rx="1" stroke="#4E5964" stroke-width="1.5"/>
 </svg>
