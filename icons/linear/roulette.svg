@@ -7,7 +7,7 @@
 <path d="M11.1546 13.0056L7.92584 18.0858" stroke="#4E5964" stroke-width="1.5"/>
 <path d="M12.8477 13.0061L16.0787 18.0853" stroke="#4E5964" stroke-width="1.5"/>
 <path d="M9 18V21M15 18V21" stroke="#4E5964" stroke-width="1.5"/>
-<rect x="6" y="21" width="12" height="1.5" rx="0.75" fill="#4E5964"/>
 <path d="M4.5 11.3125H9.88622" stroke="#4E5964" stroke-width="1.5"/>
+<path d="M7 21.5H17" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M14.1191 11.3125H19.622" stroke="#4E5964" stroke-width="1.5"/>
 </svg>
