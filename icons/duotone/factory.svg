@@ -1,4 +1,13 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="12" cy="12" r="9" stroke="#4E5964" stroke-width="1.5"/>
-<path opacity="0.4" d="M11.2929 8.70711C11.6834 8.31658 12.3166 8.31658 12.7071 8.70711L15.2929 11.2929C15.6834 11.6834 15.6834 12.3166 15.2929 12.7071L12.7071 15.2929C12.3166 15.6834 11.6834 15.6834 11.2929 15.2929L8.70711 12.7071C8.31658 12.3166 8.31658 11.6834 8.70711 11.2929L11.2929 8.70711Z" stroke="#4E5964" stroke-width="1.5"/>
+<path d="M2.5 20.9995H21.4999" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round"/>
+<path opacity="0.4" d="M6 18V17" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round"/>
+<path opacity="0.4" d="M9 18V17" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round"/>
+<path d="M21 20.4901V15.0137C21 14.4253 20.7409 13.8668 20.2917 13.4868L16.8875 10.6069C16.2119 10.0354 15.1767 10.5156 15.1767 11.4005C15.1767 12.2773 14.1579 12.7603 13.4792 12.2052L11.0715 10.2365C10.304 9.60891 9.15214 10.155 9.15214 11.1464C9.15214 12.1322 8.01161 12.68 7.24211 12.0639L6.07607 11.1302C4.8368 10.1378 3 11.0201 3 12.6077V20.9828" stroke="#4E5964" stroke-width="1.42105" stroke-linecap="round"/>
+<path opacity="0.4" d="M17.7004 20.0495V17.0095C17.7004 16.5898 17.275 16.2495 16.7504 16.2495H14.8504C14.3257 16.2495 13.9004 16.5898 13.9004 17.0095V20.0495" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.4" d="M5 10.5V7.95C5 7.42533 5.42533 7 5.95 7H6.05C6.57467 7 7 7.42533 7 7.95V12" stroke="#4E5964" stroke-width="1.42499"/>
+<path opacity="0.4" d="M11 10V7.7C11 7.17533 11.4253 6.75 11.95 6.75C12.4747 6.75 12.9 7.17533 12.9 7.7V11.5" stroke="#4E5964" stroke-width="1.42499"/>
+<path opacity="0.4" d="M17 10.74V7.69999C17 7.17533 17.4253 6.75 17.95 6.75C18.4747 6.75 18.9 7.17533 18.9 7.7V12.45" stroke="#4E5964" stroke-width="1.42499"/>
+<path opacity="0.4" d="M6 4.85019C6 4.32552 6.42533 3.90019 6.95 3.90019C7.47466 3.90019 7.89999 3.47486 7.89999 2.9502" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.4" d="M12 4.85019C12 4.32552 12.4253 3.90019 12.95 3.90019C13.4747 3.90019 13.9 3.47486 13.9 2.9502" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.4" d="M18 4.85019C18 4.32552 18.4253 3.90019 18.95 3.90019C19.4747 3.90019 19.9 3.47486 19.9 2.9502" stroke="#4E5964" stroke-width="1.42499" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

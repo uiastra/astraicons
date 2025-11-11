@@ -3,9 +3,9 @@
 <path d="M21.0027 13.8046L21.0021 16.8239C21.0016 19.1328 19.1294 21.0041 16.8205 21.0036L13.8012 21.003" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M3.00331 9.30057L3.00377 7.20057L3.00381 7.00057C3.0043 4.79144 4.79555 3.00097 7.00469 3.00145L7.20469 3.00149L9.30469 3.00195" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M3.00275 13.8006L3.00209 16.82L3.00205 17.0006C3.00156 19.2098 4.79203 21.001 7.00117 21.0015L7.80117 21.0017L10.2012 21.0022" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<rect opacity="0.4" x="6.00391" y="7.00122" width="2" height="10" fill="#4E5964"/>
-<rect opacity="0.4" x="16.0039" y="7.00342" width="2" height="10" fill="#4E5964"/>
-<rect opacity="0.4" x="11.0039" y="7.00244" width="2" height="10" fill="#4E5964"/>
-<rect opacity="0.4" x="9.00391" y="7.00195" width="1" height="10" fill="#4E5964"/>
-<rect opacity="0.4" x="14.0039" y="7.00317" width="1" height="10" fill="#4E5964"/>
+<path opacity="0.4" d="M7 6.99976L7 16.9998" stroke="#4E5964" stroke-width="2"/>
+<path opacity="0.4" d="M12 6.99976L12 16.9998" stroke="#4E5964" stroke-width="2"/>
+<path opacity="0.4" d="M17 6.99976L17 16.9998" stroke="#4E5964" stroke-width="2"/>
+<path opacity="0.4" d="M9.49805 6.99976L9.49805 11.9998L9.49805 16.9998" stroke="#4E5964"/>
+<path opacity="0.4" d="M14.498 6.99976L14.498 16.9998" stroke="#4E5964"/>
 </svg>
