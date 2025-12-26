@@ -1,10 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 15.1719V9.00002V16.4999C21 18.9852 18.9853 20.9999 16.5 20.9999H7.5C5.01472 20.9999 3 18.9852 3 16.4999V11.9999M3 8.22498V15.1719" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M21 15.2219V8.275C21 5.91398 19 4.05005 16 4.05005M14 4H12H10M3 15.2219V8.275C3 5.91398 5 4.05005 8 4" stroke="#4E5964" stroke-width="1.5"/>
-<path opacity="0.4" d="M9 5V3" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
-<path opacity="0.4" d="M15 5V3" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 <g opacity="0.4">
-<path d="M12.444 8.5H11.5551C10.5733 8.5 9.77734 9.29594 9.77734 10.2778V10.7222C9.77734 11.7041 10.5733 12.5 11.5551 12.5H12.444C13.4258 12.5 14.2218 11.7041 14.2218 10.7222V10.2778C14.2218 9.29594 13.4258 8.5 12.444 8.5Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.8895 12.5H11.1118C10.1299 12.5 9.33398 13.2959 9.33398 14.2778V14.7222C9.33398 15.7041 10.1299 16.5 11.1118 16.5H12.8895C13.8714 16.5 14.6673 15.7041 14.6673 14.7222V14.2778C14.6673 13.2959 13.8714 12.5 12.8895 12.5Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.2541 9.25H11.643C10.6612 9.25 9.86523 10.0459 9.86523 11.0278V11.4722C9.86523 12.4541 10.6612 13.25 11.643 13.25H12.2541C13.236 13.25 14.0319 12.4541 14.0319 11.4722V11.0278C14.0319 10.0459 13.236 9.25 12.2541 9.25Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.7222 13.25H11.2778C10.2959 13.25 9.5 14.0459 9.5 15.0278V15.4722C9.5 16.4541 10.2959 17.25 11.2778 17.25H12.7222C13.7041 17.25 14.5 16.4541 14.5 15.4722V15.0278C14.5 14.0459 13.7041 13.25 12.7222 13.25Z" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<path d="M21 15.439V8.51247C21 6.15837 19 4.2999 16 4.2999L8 4.25C5 4.2999 3 6.15837 3 8.51247V15.439M21 9.28525V16.7632C21 19.2412 18.9853 21.25 16.5 21.25H7.5C5.01472 21.25 3 19.2412 3 16.7632V12.2764" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M8 5.75V2.75" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M16 5.75V2.75" stroke="#4E5964" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
